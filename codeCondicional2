@@ -1,0 +1,32 @@
+//Este código é uma otimização do meu primeiro código sobre condicionais, obtive mais eficiência e rapidez.
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    
+    char resposta[14];
+    
+    printf("Você possui CNH?\nResposta: ");
+    scanf(" %s", resposta);
+    
+    for (int i = 0; resposta[i]; i++) {
+        resposta[i] = tolower(resposta[i]);
+        
+    }
+    
+    if(strcmp(resposta, "sim") == 0) {
+        printf("Ótimo, você está apto para trabalhar conosco.");
+    }
+    
+    else if(strcmp(resposta, "não") == 0) {
+        printf("Desculpe, você não está apto para trabalhar conosco");
+    }
+    
+    else {
+        printf("Resposta inválida, por favor responda novamente");
+    }
+    
+    return 0;
+}
